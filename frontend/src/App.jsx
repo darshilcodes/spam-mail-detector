@@ -11,7 +11,7 @@ const App = () => {
     try {
       setLoading(true);
       setResult(null);
-      const response = await axios.post('http://127.0.0.1:5000/predict', { email });
+      const response = await axios.post('https://spam-mail-detector-1.onrender.com/predict', { email });
       setResult(response.data);
     } catch (error) {
       console.error('Validation failed:', error);
